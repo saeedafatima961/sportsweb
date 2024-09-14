@@ -1,0 +1,569 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>JUGGLE SPORTS</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+     <style>
+       
+        
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            background-color: #f4f4f4;
+            color: #333;
+            overflow-x: hidden;
+        }
+        
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #333;
+            padding: 1rem 2rem;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 10;
+        }
+        
+        .nav-links {
+            list-style: none;
+            display: flex;
+        }
+        
+        .nav-links li {
+            margin: 0 1rem;
+        }
+        
+        .nav-links a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 1rem;
+        }
+        
+        .nav-links a:hover {
+            color: #0041f4;
+        }
+        
+        .home-section {
+            height: 100vh;
+            background-image: url('images/banner3.jpg');
+            background-repeat: no-repeat; 
+            background-size: cover;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: #f8f7f7;
+            /* width: 100%; */
+        }
+        
+        .home-section h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+        
+        .home-section p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+        }
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.img-fluid {
+  animation: fadeIn 2s ease-in-out;
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.card-body {
+  animation: slideIn 1.5s ease-in-out;
+  margin-top: 20px;
+}
+
+.animated-image {
+          transition: transform 0.5s ease, opacity 0.5s ease;
+      }
+      .animated-image:hover {
+          transform: scale(1.1); 
+          opacity: 0.9;
+      }
+       .fade-in {
+      opacity: 0;
+      animation: fadeIn 2s ease-in forwards;
+    }
+    
+    .image-container {
+        position: relative;
+        display: inline-block;
+        width: 250px;
+    }
+
+    .animated-image {
+        width: 100%;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        cursor: pointer;
+    }
+
+    .animated-image:active {
+        transform: scale(1.1);
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    }
+
+    .add-to-cart-text {
+        position: absolute;
+        bottom: 10px;
+        left: 50%;
+        transform: translateX(-50%);
+        background-color: rgba(0, 0, 0, 0.7);
+        color: white;
+        padding: 5px 10px;
+        border-radius: 5px;
+        font-size: 16px;
+        opacity: 0;
+        transition: opacity 0.3s ease;
+        pointer-events: none;
+    }
+
+    .image-container:hover .add-to-cart-text {
+        opacity: 1;
+    }
+  
+    @keyframes fadeIn {
+      to {
+        opacity: 1;
+      }
+     
+    }
+
+    footer {
+      background-color: #333;
+      color: white;
+      padding: 40px 0;
+    }
+   
+    h1, h3, p {
+      margin: 0;
+      padding: 0;
+    }
+    h1 {
+      font-size: 2.5rem;
+      margin-bottom: 20px;
+    }
+    h3 {
+      font-size: 1.75rem;
+      margin-bottom: 10px;
+    }
+    p {
+      font-size: 1rem;
+      margin-bottom: 10px;
+    }
+    a {
+      color: #1E90FF;
+      text-decoration: none;
+    }
+    .fade-in {
+      opacity: 0;
+      animation: fadeIn 1s forwards;
+    }
+    .fade-in:nth-child(1) {
+      animation-delay: 0.5s;
+    }
+    .fade-in:nth-child(2) {
+      animation-delay: 1s;
+    }
+    .fade-in:nth-child(3) {
+      animation-delay: 1.5s;
+    }
+    .fade-in:nth-child(4) {
+      animation-delay: 2s;
+    }
+    .fade-in:nth-child(5) {
+      animation-delay: 2.5s;
+    }
+    .fade-in:nth-child(6) {
+      animation-delay: 3s;
+    }
+    .fade-in:nth-child(7) {
+      animation-delay: 3.5s;
+    }
+    .fade-in:nth-child(8) {
+      animation-delay: 4s;
+    }
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    @keyframes bounceIn {
+      0%, 20%, 40%, 60%, 100% {
+        transform: translateY(0);
+      }
+      50% {
+        transform: translateY(-15px);
+      }
+    }
+    @keyframes pulse {
+      0% {
+        transform: scale(1);
+      }
+      50% {
+        transform: scale(1.05);
+      }
+      100% {
+        transform: scale(1);
+      }
+    }
+    img.bounce-in {
+      animation: bounceIn 2s ease-in-out;
+    }
+    .social-media img {
+      animation: pulse 2s infinite;
+      transition: transform 0.3s;
+    }
+    .social-media img:hover {
+      transform: scale(1.1);
+    }
+    .short_about_us p {
+      color: #ccc;
+      font-family: 'Courier New', monospace;
+      margin-top: 15px;
+    }
+
+        
+        </style> 
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo"><img src="images\JUGGLE_SPORTS__1_-removebg-preview.png" alt="" width="270px"></div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section id="home" class="home-section">
+        <h1>Welcome to Juggle Sports</h1>
+        <p>manufacturer  & exporter in sports wears, Fitness Wears, Casual Wears, Fashion Wears & Accesories</p>
+    </section>
+  <br>
+  <br>
+    <div class="container">
+        <div class="col-md-12">
+          <div class="row">
+            <div class="col-md-6">
+              <img src="images/card.jpg" class="img-fluid rounded-start" alt="..." style="max-width: 540px;">
+            </div>
+            <div class="col-md-6">
+              <div class="card-body">
+                <br><br><br>
+                <h5 class="card-title" style="font-weight: 700; font-family: Calibri, sans-serif;"><b>Football Uniform</b></h5>
+                <br>
+                <p class="card-text">Why wear a standard suit which doesn’t fit you well.<br><br>We’ll help you look your best in a tailor-made suit.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <br><br>
+      <div class="container-fluid">
+        <div class="col-md-12">
+          <div class="row">
+            <div class="col-md-6">
+              <div class="card-body">
+                <br><br><br>
+                <h5 class="card-title" style="font-weight: 700; font-family: Calibri, sans-serif;"><b>Football Uniform</b></h5>
+                <br>
+                <p class="card-text">From raw material to leathers, all the materials used in the suit are top and premium quality.</p>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <img src="images/card1.jpg" class="img-fluid rounded-start" alt="..." style="max-width: 540px;">
+            </div>
+          </div>
+        </div>
+      </div>
+<br>
+<br>
+
+<div class="card bg-dark text-white">
+    <img src="images/sports-wears-banner.jpg" class="card-img" alt="...">
+    <div class="card-img-overlay">
+      <h3 class="card-title">COMPANY PROFILE</h3>
+      <p class="card-text">Dear Sir/Madam We are Export and Manufacturer of all kinds of Sublimation Items like as T-Shirts , Hoodies , Shorts <br>
+        Basketball Uniforms , American Football Uniforms , Cleats , Arm Sleeves , Head Bands , Book Bags , Duffel Bags ,<br>
+       Soft Ball jerseys , Baseball Button Jersey , Baseball Pant , Leggings, Compression Uniforms ,Cheer Uniforms.<br><br>Best Regards,<strong>MUBASHAR HASSAN</strong></p>
+    </div>
+  </div>
+<br>
+<br>
+<div class="contaimer">
+    <div class="row" style="text-align: center;">
+        <div class="col-md-12">
+            <h1>Our Categories</h1>
+            <p>You can use our designers or provide us your own designs<br> for customization. Custom logos are accepted.</p>
+        </div>
+    </div>
+</div>
+<br>
+<br>
+<div class="container-fluid"></div>
+    <div class="container">
+    <div class="row" style="text-align: center;">
+        <div class="col-lg-12 title_section">
+            <h3>UNIFORMS</h3>
+        </div>
+        <br>
+        <div class="col-md-4">
+          <div class="image-container">
+              <img src="images/uniform3.jpg" alt="Football Uniform" class="animated-image" >
+              <div class="add-to-cart-text">Add to Cart</div>
+          </div>
+          <h4>Football Uniform</h4>
+      </div>
+        <br>
+
+        <div class="col-md-4">
+          <div class="image-container">
+              <img src="images/uniform.jpg" alt="Basketball Uniform" class="animated-image">
+              <div class="add-to-cart-text">Add to Cart</div>
+          </div>
+          <h4>Basketball Uniform</h4>
+      </div>
+      <br>
+      <div class="col-md-4">
+          <div class="image-container">
+              <img src="images/uniform2.jpg" alt="Football Uniform" class="animated-image">
+              <div class="add-to-cart-text">Add to Cart</div>
+          </div>
+          <h4>Football Uniform</h4>
+      </div>
+      <br>
+  </div>
+ </div>
+ <br>
+
+ <div class="container">
+  <div class="row" style="text-align: center;">
+      <div class="col-lg-12 title_section">
+          <h3>CASUAL WEARS</h3>
+      </div>
+      <br>
+      <div class="col-md-4">
+          <div class="image-container">
+              <img src="images/cacual2.jpg" alt="Shirts" class="animated-image">
+              <div class="add-to-cart-text">Add to Cart</div>
+          </div>
+          <h4>Shirts</h4>
+      </div>
+      <br>
+      <div class="col-md-4">
+          <div class="image-container">
+              <img src="images/cacual4.jpg" alt="Hoodies" class="animated-image">
+              <div class="add-to-cart-text">Add to Cart</div>
+          </div>
+          <h4>Hoodies</h4>
+      </div>
+      <br>
+      <div class="col-md-4">
+          <div class="image-container">
+              <img src="images/cacual5.jpg.jpg" alt="Jackets" class="animated-image">
+              <div class="add-to-cart-text">Add to Cart</div>
+          </div>
+          <h4>Jackets</h4>
+      </div>
+      <br>
+  </div>
+ </div>
+ <br>
+
+ <div class="container">
+  <div class="row" style="text-align: center;">
+      <div class="col-lg-12 title_section">
+          <h3>FITNESS WEAR</h3>
+      </div>
+      <br>
+      <div class="col-md-4">
+          <div class="image-container">
+              <img src="images/fitness4.jpg" alt="Trouser" class="animated-image">
+              <div class="add-to-cart-text">Add to Cart</div>
+          </div>
+          <h4>Trouser</h4>
+      </div>
+      <br>
+      <div class="col-md-4">
+          <div class="image-container">
+              <img src="images/fitnes2.jpg" alt="Full Dress" class="animated-image">
+              <div class="add-to-cart-text">Add to Cart</div>
+          </div>
+          <h4>Full Dress</h4>
+      </div>
+      <br>
+      <div class="col-md-4">
+          <div class="image-container">
+              <img src="images/fitness3.jpg.jpg" alt="Shirt" class="animated-image">
+              <div class="add-to-cart-text">Add to Cart</div>
+          </div>
+          <h4>Shirt</h4>
+      </div>
+      <br>
+  </div>
+ </div>
+</div>
+<br>
+<br>
+<div class="container-fluid vedio-section" style="background-color:  #333; color: white;  box-shadow: 8px 0 8px 10px rgba(0.6, 0, 0, 0.4);">
+    <div class="row">
+      <div class="col-lg-12" style="text-align: center;">
+        <br>
+       <h1><b>JUGGLE SPORTS PRODUCTION VEDIO</b></h1>
+      </div>
+    </div>
+    <div class="row">
+        <div class="col-md-6">
+          <video width="100%" style="height: 386px;" controls>
+            <source src="images/video.mp4" type="video/mp4">
+               <source src="mov_bbb.ogg" type="video/ogg">
+         </video>
+      </div>
+        <div class="col-md-6" style="font-size: 40px; font-weight: 500; font-family: 'Courier New' monospace;">
+          <br>
+          <p>We are excited to share that our stitching quality is truly exceptional. We take great pride in our meticulous craftsmanship and use only the finest materials and techniques to ensure every stitch is flawless and durable. Whether it's for uniforms, casual wear, or fitness apparel, our commitment to detail results in products that not only look great but also stand the test of time. We guarantee that each piece is crafted with the highest standards of precision and care, ensuring you receive only the best in quality and durability.</p>
+        </div>
+    </div>
+  </div>
+  <br>
+  <br>
+  <div class="container-fluid" >
+    <div class="row" style="text-align: center;">
+        <div class="col-lg-12 title_section">
+            <h1>OUR GALLERY</h1>
+        </div>
+        <br>
+        <br>
+        <br>
+        <div class="col-md-4">
+            <img src="images/1_Jckwto7JJx_4E-1CEjBmeA.png" alt="Designer setup" class="animated-image" style="width: 300px;">
+            <h4>Designer setup</h4>
+        </div>
+        <br>
+        <div class="col-md-4">
+            <img src="images/stitching-machine-768x490.webp" alt="Stiching Machine" class="animated-image" style="width: 300px;">
+            <h4>Stiching Machine</h4>
+        </div>
+        <br>
+        <div class="col-md-4">
+            <img src="images/rtoverviewmobile.jpg" alt="Roland Texart RT-640" class="animated-image" style="width: 300px;">
+            <h4>Roland Texart RT-640</h4>
+        </div>
+        <br>
+        <div class="col-md-4">
+          <img src="images/bed.jpg" alt=" sublimation  bed transfer" class="animated-image" style="width: 300px;">
+          <h4> sublimation  bed</h4>
+      </div>
+      <br>
+      <div class="col-md-4">
+        <img src="images/pakage.avif" alt="Paking Room" class="animated-image" style="width: 300px;">
+        <h4>Paking Room</h4>
+    </div>
+    <br>
+    <div class="col-md-4">
+      <img src="images/Sportswear-Manufacturers-and-Exporters-in-Pakistan.jpg" alt="Stiching Room" class="animated-image" style="width: 300px;">
+      <h4>Stiching Room</h4>
+  </div>
+  <br>
+    </div>
+  </div>
+  <br>
+  <div class="container-fluid">
+    <div class="row">
+        <div class="col-lg-12">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d215365.87058881138!2d74.5380002!3d32.4969774!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x391eea5674db6cfd%3A0xa8d03983946d4744!2sSialkot%2C%20Punjab!5e0!3m2!1sen!2s!4v1578051770095!5m2!1sen!2s" width="100%" height="360" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+        </div>
+    </div>
+</div>
+<br>
+
+<footer>
+    <div class="container-fluid" style="background-color: #333; color: white;">
+      <div class="row">
+        <div class="col-lg-12 text-center">
+          <h1 class="fade-in">Address:</h1>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-lg-6 text-center">
+          <h3 class="fade-in">Pakistan:</h3>
+          <p class="fade-in">Defence Road Near PSO Pump Sialkot, (51310), PAKISTAN</p>
+          <p class="fade-in">Email: <a href="mailto:info@jugglesports.com.pk">info@jugglesports.com.pk</a></p>
+          <p class="fade-in">Phone: <a href="https://wa.me/923474931430">+92 347 4931430</a></p>
+        </div>
+
+        <div class="col-lg-6 text-center">
+          <h3 class="fade-in">USA:</h3>
+          <p class="fade-in">1021 Ives Dairy Road Building 3, Suite 115 Miami, Florida 33179</p>
+          <p class="fade-in">Email: <a href="mailto:info@jugglesports.com.pk">info@jugglesports.com.pk</a></p>
+          <p class="fade-in">Phone: <a href="https://wa.me/17867887660">+1 786 7887660</a></p>
+        </div>
+      </div>
+
+      <div class="row mt-4">
+        <div class="col-lg-6 text-center">
+          <div class="short_about_us fade-in">
+            <img src="images/jslogo.png" alt="Juggle Sports Logo" width="120px" class="bounce-in">
+            <p>Dear Sir/Madam, We are an exporter and manufacturer of all kinds of sublimation items such as T-Shirts, Hoodies, Shorts, Basketball Uniforms, American Football Uniforms, Cleats, and more.</p>
+          </div>
+        </div>
+
+        <div class="col-lg-6 text-center">
+          <div class="social-media fade-in">
+            <a href="https://facebook.com/juggle.sport" target="_blank"><img src="images/facebook-logo.webp" alt="Facebook Logo" width="60px"></a>
+            <a href="https://instagram.com/jugglesports" target="_blank"><img src="images/ins.png" alt="Instagram Logo" width="80px"></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="row mt-4">
+        <div class="col-lg-12" >
+          <p>Copyright &copy; 2024 Juggle Sports. All rights reserved.</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</body>
+</html>
+  
