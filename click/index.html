@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pizza Peace App</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .app-container {
+            text-align: center;
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 90%;
+            max-width: 400px;
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        p {
+            font-size: 18px;
+            color: #555;
+            margin: 20px 0;
+        }
+
+        button {
+            background-color: #ff6347;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #e5533c;
+        }
+
+        .message-box {
+            margin-top: 20px;
+            padding: 10px;
+            background-color: #f0f8ff;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="app-container">
+        <h1>Pizza Peace App 🍕</h1>
+        <p>Click the button below to craft a patch-up message for your brother!</p>
+        <button onclick="sendMessage()">Send Message</button>
+        <div id="messageBox" class="message-box"></div>
+    </div>
+
+    <script>
+        function sendMessage() {
+            const message = `
+                Hey bro! 🤗
+                If you want to patch things up with your wife, 
+                here's the ultimate peace offering:
+                1. Order her favorite pizza 🍕
+                2. Get her a nice cold drink 🥤
+                Trust me, it's the quickest way to make things right. 😉
+            `;
+            const messageBox = document.getElementById('messageBox');
+            messageBox.textContent = message;
+            messageBox.style.display = 'block';
+        }
+    </script>
+</body>
+</html>
